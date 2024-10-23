@@ -11,7 +11,7 @@ public class FileScannerProgram{
         System.out.println("Opening and reading file");
         try{
             fileInput = new Scanner(inFile);
-            while(fileInput.hasNext()){
+            while(fileInput.hasNextLine()){
                 inputLine = fileInput.nextLine();
                 maze.add(Arrays.toString(inputLine.split("")));
                 System.out.println(inputLine);
