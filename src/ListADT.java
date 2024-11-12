@@ -1,20 +1,13 @@
+import java.util.Arrays;
+
 public class ListADT {
-    private int[] array;
+    private char[] array;
     private int size;
     public static void main(String[]args){
-        ListADT arr = new ListADT(5);
-        arr.addItem(0,7);
-        arr.addItem(1,-8);
-        arr.addItem(2,47);
-        arr.addItem(3,14);
-        arr.addItem(3,2);
-        arr.removeItem(3);
-        arr.removeAll();
-        System.out.println(arr.isEmpty());
-        arr.printList();
+
     }
     public ListADT(int capacity){
-        array = new int[capacity];
+        array = new char[capacity];
         size = 0;
     }
     public boolean isEmpty(){
@@ -23,13 +16,18 @@ public class ListADT {
     public int size(){
         return size;
     }
-    public void addItem(int index, int num){
+    public void addItem(char num){
+        array[size] = num;
+        size++;
+    }
+
+    public void addItem(int index, char num){
         if(index == size){
             array[index] = num;
         }
         else{
             for (int i = index; i < size; i++){
-                int temp = array[index];
+                char temp = array[index];
                 array[index] = num;
                 array[i + 1] = temp;
             }
@@ -41,10 +39,10 @@ public class ListADT {
             array[index] = 0;
         }
         else{
-            int num = 0;
+            char num = 0;
             array[index] = num;
             for (int i = size; i > index; i--){
-                int temp = array[index];
+                char temp = array[index];
                 array[index] = num;
                 array[i - 1] = temp;
             }
@@ -52,17 +50,19 @@ public class ListADT {
         size--;
     }
     public void removeAll(){
-        array = new int[size];
+        array = new char[size];
         size = 0;
     }
-    public int getItem(int index){
-        return array[index];
+
+    public String getItem(int index){
+        return Character.toString ((char) array[index]);
     }
     public void printList(){
         for(int i = 0; i < size; i++){
             System.out.print(getItem(i) + " ");
         }
     }
+
 
 
 }
