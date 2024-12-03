@@ -38,7 +38,6 @@ public class SelectionSort {
         return list;
     }
 
-
     public static int[] MinSelectionSort(int[] list) {
         int length = list.length;
         for (int i = 0; i < length - 1; i++) {
