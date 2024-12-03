@@ -13,8 +13,12 @@ public class IntNodeTest {
         //n3.setNext(null);
         //System.out.println(n1.getNext().getValue());
         IntNode curr = n1;
-        curr = n1.getNext();
-        System.out.println(curr.getValue());
+        //curr = n1.getNext();
+        while(curr != null){
+            System.out.println(curr.getValue());
+            curr = curr.getNext();
+        }
+
         IntNode head;
         head = new IntNode(5);
         head = new IntNode(6, head);
