@@ -36,7 +36,6 @@ public class LinkedList {
         size++;
     }
 
-
     public void remove(int value){
         for (int i=0;i<size;i++){
             IntNode currentNode = head.getNext();
