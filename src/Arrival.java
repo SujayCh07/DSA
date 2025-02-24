@@ -29,7 +29,6 @@ public class Arrival {
             numCustomers++;
         }
     }
-
     public String removeCustomer() {
         if (numCustomers == 1) {
             this.front = null;
