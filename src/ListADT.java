@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class ListADT {
     private char[] array;
     private int size;

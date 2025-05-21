@@ -1,3 +1,5 @@
+package FinalProject;
+
 public class IntNode {
     private int value;
     private IntNode next;

@@ -1,4 +1,4 @@
-import org.w3c.dom.Node;
+import FinalProject.IntNode;
 
 public class ReferenceBasedStack {
     IntNode top;

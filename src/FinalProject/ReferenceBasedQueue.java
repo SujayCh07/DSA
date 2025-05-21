@@ -1,11 +1,15 @@
+package FinalProject;
+
 public class ReferenceBasedQueue {
     IntNode front;
     IntNode back;
+    int size;
     int numItems = 0;
 
-    public ReferenceBasedQueue(int top, int back) {
+    public ReferenceBasedQueue() {
         this.front = null;
         this.back = null;
+        this.size = 0;
     }
 
     public boolean isEmpty() {
@@ -31,13 +35,19 @@ public class ReferenceBasedQueue {
     }
 
     public int dequeue() {
-        if (numItems == 1) {
-            dequeueAll();
-            return front.getValue();
+        if (front == null) {
+            return -1;
         }
-        numItems--;
-        front.setNext(front.getNext());
-        return front.getValue();
+
+        int value = front.getValue();
+        front = front.getNext();
+        size--;
+
+        if (front == null) {
+            back = null;
+        }
+
+        return value;
     }
 
     public int peek() {

@@ -1,3 +1,5 @@
+package FinalProject;
+
 public class ArrayBasedStack {
     int top = -1;
     int size;
@@ -8,6 +10,7 @@ public class ArrayBasedStack {
         this.top = top;
         this.size = size;
         this.numItems = numItems;
+        this.array = new int[size];
     }
 
     public boolean isEmpty() {

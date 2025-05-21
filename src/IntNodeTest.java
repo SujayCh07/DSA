@@ -1,3 +1,5 @@
+import FinalProject.IntNode;
+
 public class IntNodeTest {
     public static void main(String[] args) {
         IntNode n1 = new IntNode(1);

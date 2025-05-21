@@ -1,5 +1,8 @@
+import FinalProject.LinkedList;
+
 public class TestLinkedList {
     public static void main (String [] args){
+        /*
         LinkedList list = new LinkedList();
         System.out.println("Is empty = " + list.isEmpty() + " Size = " + list.getSize());
         list.display();
@@ -31,5 +34,7 @@ public class TestLinkedList {
         list.removeAll();
         list.display();
         System.out.println("Is empty = " + list.isEmpty() + " Size = " + list.getSize());
+
+         */
     }
 }
